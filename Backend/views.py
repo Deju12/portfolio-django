@@ -3,8 +3,10 @@ from django.http import JsonResponse
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from .serializers import EmailSerializer
-
 class SendEmailView(APIView):
+    
+    def get(self, request):
+        return Response('<div> fjhsdgfjhsdfjshkdj </div>')
     def post(self, request):
         serializer = EmailSerializer(data=request.data)
         if serializer.is_valid():
