@@ -21,7 +21,6 @@ from .views import SendEmailView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('send-email/', SendEmailView.as_view(), name='send_email'),
-    path('', SendEmailView.as_view(), name='get'),
+    path('', SendEmailView.as_view(), name='send_email'),
 ]
 
